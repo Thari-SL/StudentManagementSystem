@@ -1,0 +1,34 @@
+import { Component, OnInit } from '@angular/core';
+import {animate, style, transition, trigger} from "@angular/animations";
+
+@Component({
+  selector: 'app-top-bar',
+  templateUrl: './top-bar.component.html',
+  styleUrls: ['./top-bar.component.scss'],
+  animations:[
+    trigger('leftSlider',[
+      transition('void => *',[
+        style({transform:'translateX(-100%)'}),
+        animate('0.4s')
+      ]),
+      transition('* => void',[
+        animate('0.4s'),style({transform:'translateX(-100%)'})
+
+      ]),
+
+
+    ])
+  ]
+})
+export class TopBarComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  sliderState=false;
+  toggleSlider() {
+    this.sliderState=!this.sliderState;
+  }
+}

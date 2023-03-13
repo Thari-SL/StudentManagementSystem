@@ -1,0 +1,31 @@
+<router-outlet></router-outlet>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>Registration Number</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Address</th>
+    <th>Birthdate</th>
+    <th>ID Number</th>
+  </tr>
+
+  </thead>
+  <tbody>
+  <tr *ngFor="let tempData of students; index as num">
+    <td>{{tempData.regNum}}</td>
+    <td>{{tempData.fName}}</td>
+    <td>{{tempData.lName}}</td>
+    <td>{{tempData.address}}</td>
+    <td>{{tempData.birthdate}}</td>
+    <td>{{tempData.idNum}}</td>
+  </tr>
+  </tbody>
+</table>
+<mat-paginator [length]="100"
+               [pageSize]="10"
+               [pageSizeOptions]="[5, 10, 25, 100]"
+               aria-label="Select page">
+</mat-paginator>
+

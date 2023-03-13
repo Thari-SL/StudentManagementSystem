@@ -1,0 +1,36 @@
+.header-text{
+  color: #2c3e50;
+}
+.outer{
+  padding: 20px;
+  justify-content: space-between;
+  text-align: justify;
+  //position: absolute;
+  //display: flex;
+  margin: 20px;
+}
+.content-wrap{
+  padding: 50px;
+  justify-content: center;
+  //position: relative;
+  //display: flex;
+}
+.mb-5{
+  width: 80%;
+  height: 50px;
+}
+
+.col-12{
+  width: 70%;
+  input{
+    width: 60%;
+    height: 30px;
+  }
+}
+input{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: transparent;
+
+}

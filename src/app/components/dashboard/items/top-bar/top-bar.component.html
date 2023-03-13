@@ -1,0 +1,38 @@
+<div class="main-wrap">
+
+  <div class="function-name-outer">
+    <h4>
+      Student Management System
+    </h4>
+  </div>
+
+  <div class="ham-wrap" (click)="toggleSlider()">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <div class="menu-outer">
+  </div>
+
+
+</div>
+
+<div class="left-slider" *ngIf="sliderState" [@leftSlider]>
+  <ul class="nav-wrap">
+    <li>
+      <a href="/dashboard/add-the-students">Add the students</a>
+    </li>
+    <li>
+      <a href="/dashboard/remove-the-student">Remove the students</a>
+    </li>
+    <li>
+      <a href="/dashboard/list-the-students">List the students</a>
+    </li>
+    <li>
+      <a href="/dashboard/alter-courses">Alter the student's course details</a>
+    </li>
+  </ul>
+
+</div>
+

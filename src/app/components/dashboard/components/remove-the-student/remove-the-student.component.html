@@ -1,0 +1,27 @@
+<router-outlet></router-outlet>
+<form [formGroup]="studentForm" (ngSubmit)="uploadData()">
+<div class="outer">
+  <h2 class="header-text">Remove The Students</h2>
+  <hr>
+  <div class="content-wrap">
+    <br>
+
+      <div class="col-12">
+
+        <label for="regNum" class="form-label">Registration  Number</label>
+        <input type="text" class="form-control" id="regNum" formControlName="regNum" placeholder="D/BSE/99/999">
+      </div>
+      <br>
+      <br><br><br>
+
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary" [disabled]="studentForm.invalid">Delete Student</button>
+      </div>
+
+
+  </div>
+
+
+</div>
+</form>
+

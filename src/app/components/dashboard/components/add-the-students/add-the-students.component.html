@@ -1,0 +1,61 @@
+<router-outlet></router-outlet>
+<form [formGroup]="studentForm" (ngSubmit)="uploadData()">
+<div class="outer">
+  <h2 class="header-text">Add The Students</h2>
+  <hr>
+  <div class="content-wrap">
+    <br>
+
+    <div class="col-12">
+
+      <label for="regNum" class="form-label">Registration  Number</label>
+      <input type="text" class="form-control" id="regNum" formControlName="regNum" placeholder="D/BSE/99/999">
+
+
+    </div>
+    <br>
+    <label  class="form-label">Student Name</label>
+    <br>
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" id="fName" formControlName="fName" placeholder="First name" aria-label="First name">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" id="lName" formControlName="lName" placeholder="Last name" aria-label="Last name">
+      </div>
+    </div>
+    <br>
+    <div class="col-12">
+      <label for="address" class="form-label">Address</label>
+      <input type="text" class="form-control" id="address" formControlName="address" placeholder="1234 Main St">
+    </div>
+    <br>
+    <div class="col-12">
+      <label for="birthdate" class="form-label">Birthdate</label>
+      <input type="date" class="form-control" id="birthdate" formControlName="birthdate">
+    </div>
+    <br>
+    <div class="col-12">
+      <label for="idNum" class="form-label">Student ID Number</label>
+      <input type="text" class="form-control" id="idNum" formControlName="idNum" placeholder="222222222222V">
+    </div>
+    <br>
+    <div class="col-12">
+      <label for="degree" class="form-label">Degree Program</label>
+      <input type="text" class="form-control" id="degree" formControlName="degree" placeholder="Software Engineering">
+    </div>
+    <br>
+    <br><br><br>
+
+    <div class="mb-3">
+      <button type="submit" class="btn btn-primary" [disabled]="studentForm.invalid">Add Student</button>
+    </div>
+
+
+  </div>
+
+
+
+</div>
+</form>
+
